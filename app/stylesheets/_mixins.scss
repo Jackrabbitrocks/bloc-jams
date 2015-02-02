@@ -1,0 +1,5 @@
+@mixin playerLayout($width){
+	width: $width;
+    display: inline-block;
+    vertical-align: middle;
+}

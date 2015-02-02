@@ -223,6 +223,7 @@ var offHover = function(event) {
  
     $(document).bind('mousemove.thumb', function(event){
       updateSeekPercentage($seekBar, event);
+      consoleUpdate(event);
     });
  
     //cleanup
@@ -236,6 +237,9 @@ var offHover = function(event) {
  
  };
 
+function consoleUpdate (event) {
+  console.log(event.pageX + " = page x", event.pageY + " = page y");
+}
 
 
   var updateSeekPercentage = function($seekBar, event) {

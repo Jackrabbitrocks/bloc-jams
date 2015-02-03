@@ -281,8 +281,8 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
   	$scope.subText += "?";
   };
 
-  $scope.albumURLs = [
-     '/images/album-placeholders/album-1.jpg',
+  var randoAlbums = [
+    '/images/album-placeholders/album-1.jpg',
      '/images/album-placeholders/album-2.jpg',
      '/images/album-placeholders/album-3.jpg',
      '/images/album-placeholders/album-4.jpg',
@@ -291,9 +291,20 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
      '/images/album-placeholders/album-7.jpg',
      '/images/album-placeholders/album-8.jpg',
      '/images/album-placeholders/album-9.jpg',
-   ];
+     ];
+
+  $scope.randoAlbm = function() {
+    $scope.albumURLs = shuffle(randoAlbums);
+  }
+
+  $scope.albumURLs = shuffle(randoAlbums);
    
  }]);
+
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {

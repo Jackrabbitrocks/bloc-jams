@@ -60,6 +60,10 @@
   display: inline-block;
   width: 28px;
   height: 28px; }
+  .album-song-button .first, .album-song-button .last {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .album-song-button .odd {
+    background-color: rgba(255, 255, 255, 0.2); }
 
 .album-song-button:hover {
   cursor: pointer;

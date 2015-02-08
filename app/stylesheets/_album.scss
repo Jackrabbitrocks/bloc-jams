@@ -53,6 +53,13 @@
     display: inline-block;
     width: 28px;
     height: 28px;
+
+    .first, .last {
+      background-color: rgba(255,255,255, .5);
+    }
+    .odd {
+      background-color: rgba(255,255,255, .2);
+    }
   }
  
   .album-song-button:hover {
